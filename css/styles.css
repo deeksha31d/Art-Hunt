@@ -1,0 +1,646 @@
+* {
+  padding: 0 ;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  background-color: #009393;
+}
+p{
+  margin: 15px 0 20px 0;
+  color: #423F3E;
+}
+.section-p1{
+  padding: 40px 80px;
+}
+.section-m1{
+  margin: 40px 0;
+}
+button.white{
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: white;
+  background-color: transparent;
+  cursor: pointer;
+  border: 1px solid white;
+  outline: none;
+  transition: 0.2s;
+}
+/*logo */
+.logo{
+  font-size: 40px;
+  font-family: 'Dancing Script', cursive;
+}
+.logo p{
+  color: white;
+}
+footer .logo p{
+    font-size: 40px;
+    font-family: 'Dancing Script', cursive;
+}
+footer .logo  p{
+  color:#016170 ;
+}
+.logo span{
+  color: #00e0c6 ;
+}
+/*header start */
+#header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  background-color:#016170 ;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+  z-index: 999;
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+#navbar{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#navbar li{
+  list-style: none;
+  padding:  0 20px;
+  position: relative;
+}
+#navbar li a{
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+  transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a.active {
+  color: #00e0c6;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after{
+  content: "";
+  width: 30%;
+  height: 2px;
+  background-color: #00e0c6;
+  position: absolute;
+  bottom: -4px;
+  left: 20px;
+}
+#mobile{
+  display: none;
+  text-align: center;
+}
+#close{
+  display: none;
+}
+/*home page*/
+#hero{
+
+}
+.content{
+  padding: 80px 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.content h1{
+  font-family: 'Montaga', serif;
+  padding-bottom: 20px ;
+  color: #016170;
+
+
+}
+.content h2{
+    font-family: 'Montaga', serif;
+    padding-bottom: 20px ;
+    color: #423F3E
+
+
+}
+.content h4{
+    font-family: 'Ubuntu', sans-serif;
+    padding-bottom: 20px ;
+    color: #423F3E
+}
+.content p{
+  padding-bottom: 20px ;
+}
+.hero-img{
+  height: 85vh;
+  width: 100%;
+
+}
+/*button*/
+.button {
+  background-color: transparent;
+  border: 1px solid #016170;
+  box-sizing: border-box;
+  color: #00132C;
+  font-family: "Avenir Next LT W01 Bold",sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 24px;
+  padding: 16px 23px;
+  position: relative;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button:hover,
+.button:active {
+  outline: 0;
+}
+
+.button:hover {
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.button:before {
+  background-color: #D5EDF6;
+  content: "";
+  height: calc(100% + 3px);
+  position: absolute;
+  right: -7px;
+  top: -9px;
+  transition: background-color 300ms ease-in;
+  width: 100%;
+  z-index: -1;
+}
+
+.button:hover:before {
+  background-color: #00e0c6;
+}
+
+@media (min-width: 768px) {
+  .button {
+    padding: 16px 32px;
+  }
+}
+/*info*/
+#info {
+
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+/*  background-color: #CDF0EA;*/
+}
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: aqua; */
+}
+.left {
+  width: 50%;
+  height: 550px;
+  background-color: #CDF0EA;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 8px;
+  padding: 30px;
+  padding-right: 15%;
+
+}
+.right {
+  width: 50%;
+  min-height: 400px;
+  background: url(https://video.cgtn.com/news/2020-07-01/From-trash-to-art-Chinese-artist-redefines-old-items-with-paintbrush-RM4EQdywHm/video/fd20497697c740fcbf63d13a5b7936da/fd20497697c740fcbf63d13a5b7936da.jpg)
+    no-repeat center / cover;
+
+  border-radius: 8px;
+
+  margin-left: -150px;
+}
+.right h1 {
+  font-size: 40px;
+  font-weight: lighter;
+}
+.right p {
+  margin: 20px 0;
+  font-weight: 500;
+  line-height: 25px;
+}
+@media only screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    width: 100%;
+    margin: 0 20px;
+  }
+  .left {
+    width: 100%;
+    height: 520px;
+  }
+  .right {
+    width: 90%;
+    margin: 0;
+    margin-top: -50px;
+  }
+}
+
+.feature-box{
+  font-family: 'Montaga', serif;
+  color: #016170;
+  padding: 10px 0;
+}
+
+/*featured products*/
+.featured-txt{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 40px;
+    padding: 40px 0;
+    background-color: #CDF0EA
+}
+#product1{
+  text-align: center;
+}
+#product1 .pro-container{
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+#product1 .pro{
+  width: 23%;
+  min-width: 250px;
+  padding: 10px 12px;
+  border: 1px solid  #CDF0EA;
+  border-radius: 25px;
+  cursor: pointer;
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.02);
+  margin: 15px 0;
+  transition: 0.2s ease;
+  position: relative;
+}
+#product1 .pro:hover{
+  box-shadow: 20px 20px 30px rgba(0, 0, 0, 0.1);
+}
+#product1 .pro img{
+  width: 100%;
+  border-radius: 20px;
+}
+#product1 .pro .des{
+  text-align: start;
+  padding: 10px 0;
+}
+#product1 .pro .des h5{
+  color: #016170;
+  text-align: center;
+  padding-top: 7px;
+  font-size: 17px;
+}
+#product1 .pro .des span{
+  color: #423F3E;
+  font-size: 14px;
+}
+#product1 .pro .des i{
+  font-size: 14px;
+  color: rgba(243, 181, 25);
+}
+#product1 .pro .des h4{
+  font-size: 18px;
+  padding-top: 7px;
+  font-weight: 700;
+  color:  #016170;
+}
+#product1 .pro  .cart{
+  color:  #016170;
+  position: absolute;
+  bottom: 20px;
+  right: 10px;
+padding-right: 5%;
+padding-bottom: 3%;
+}
+/* banner */
+#sm-banner{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+#sm-banner .banner-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 50px;
+  background: url("https://img.freepik.com/free-photo/portrait-young-female-jumping-with-megaphone_23-2148883670.jpg?w=2000") no-repeat center / cover;
+  height: 60vh;
+  min-width: 660px;
+  background-size: cover;
+  background-position: center;
+}
+#sm-banner h4{
+  color: white;
+  font-size: 25px;
+  font-weight: 400;
+}
+#sm-banner h2{
+  color: white;
+  font-size: 35px;
+  font-weight: 800;
+}
+#sm-banner span{
+  color: white;
+  font-size: 15px;
+  font-weight: 500;
+  padding-bottom: 15px;
+}
+#sm-banner .banner-box:hover button{
+  background: #590696;
+  border: 1px solid #590696;
+}
+
+#sm-banner .banner-box2{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  padding: 50px;
+  background: url("https://media.istockphoto.com/photos/portrait-of-her-she-nice-attractive-lovely-winsome-focused-cheerful-picture-id1162152345?b=1&k=20&m=1162152345&s=170667a&w=0&h=8S7xZjRp8orXRZ-jlIuuNR19ZM7H7DSTQFLEKaBy508=") no-repeat center / cover;
+  height: 60vh;
+  min-width: 660px;
+  background-size: cover;
+  background-position: center;
+}
+#sm-banner .banner-box2:hover button{
+  background: #FBCB0A;
+  border: 1px solid #FBCB0A;
+}
+#banner-3{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 80px;
+}
+#banner-3 .banner-box{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+  background: url("https://cdn11.bigcommerce.com/s-x49po/images/stencil/1280x1280/products/36253/49451/Vintagebicycleandoldhat_na_550_699_2828X4000_0__96192.1544433540.jpg?c=2") no-repeat center / cover;
+  height: 30vh;
+  min-width: 30%;
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 20px;
+}
+
+#banner-3 .banner-box2{
+  background: url("https://i.shgcdn.com/f773e5b6-6c3d-4081-8387-2a67afc7fe1a/-/format/auto/-/preview/3000x3000/-/quality/lighter/") no-repeat center / cover;
+
+}
+#banner-3 .banner-box3{
+  background: url("https://i.shgcdn.com/a63600c2-a92f-491c-a23b-c50ec25dfed1/-/format/auto/-/preview/3000x3000/-/quality/lighter/") no-repeat center / cover;
+
+}
+#banner-3 h2{
+  color: white;
+  font-weight: 900;
+  font-size: 22px;
+  background-color: black;
+  padding: 10px 10px;
+}
+#banner-3 h3{
+  color: white;
+  font-weight: 800;
+  font-size: 15px;
+}
+/* newsletter*/
+#newsletter{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  background-color: #CDF0EA;
+
+}
+#newsletter h4{
+  font-size: 22px;
+  font-weight: 700;
+  color:#016170;
+}
+#newsletter p{
+  font-size: 14px;
+  font-weight: 600;
+  color: #423F3E;
+}
+#newsletter p span{
+  color: #016170;
+}
+#newsletter input{
+  height: 3.124rem;
+  padding: 0 1.25rem;
+  font-size: 14px;
+  width: 100%;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  outline: none;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+#newsletter button{
+  font-size: 13px;
+  font-weight: 600;
+  padding: 11px 18px;
+  color: white;
+  background-color: #016170;
+  white-space: nowrap;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  transition: 0.2s;
+  border-top-right-radius: 4px;
+  border-bottom-right-radius: 4px;
+}
+#newsletter .form{
+  display: flex;
+  width: 40%;
+}
+/*footer*/
+footer{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+footer .col{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  padding: 0 20px;
+}
+footer .logo{
+  margin-bottom: 30px;
+}
+footer h4{
+  font-size: 18px;
+  padding-bottom: 20px;
+}
+footer p{
+  font-size: 14px;
+  margin: 0 0 8px 0;
+}
+footer a{
+  font-size: 14px;
+  text-decoration: none;
+  margin-bottom: 10px;
+  color: #222;
+
+}
+footer .follow{
+  margin-top: 20px;
+}
+footer .follow i{
+  color: #423F3E;
+  padding-right: 4px;
+  cursor: pointer;
+}
+footer .install .row .btn{
+  width: 150px;
+  white-space: nowrap;
+  margin: 10px 3px 10px 0;
+}
+footer .install .row .btn-light{
+  background-color: #CDF0EA;
+  width: 160px;
+}
+footer .copyright p{
+  margin-top: 10px;
+  color: black;
+  font-weight: bold;
+}
+footer .follow i:hover,
+footer a:hover{
+  color: #016170;
+}
+footer .copyright{
+  width: 100%;
+  text-align: center;
+}
+@media (max-width: 799px) {
+  #navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    height: 100vh;
+    width: 300px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+    padding: 80px 0 0 10px;
+    transition: 0.3s;
+  }
+  #navbar.active{
+    right: 0px;
+  }
+  #navbar li{
+    margin-bottom: 25px;
+  }
+  #navbar li a{
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: 600;
+    color: #016170;
+    transition: 0.3s ease;
+  }
+  #navbar li a:hover,
+  #navbar li a.active {
+    color: #00e0c6;
+  }
+  #navbar li a.active::after,
+  #navbar li a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background-color: #00e0c6;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+  }
+#navbar a{
+
+}
+  #mobile{
+    display: flex;
+    text-align: center;
+  }
+  #mobile i{
+    color: white ;
+    font-size: 25px;
+    padding-left: 20px;
+  }
+  #close{
+    display: initial;
+    position: absolute;
+    top: 5%;
+    left: 10%;
+    font-size: 25px;
+    color: #016170;
+  }
+  #lg-bag{
+    display: none;
+  }
+  .content{
+    padding: 80px 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+  #product1 .pro-container{
+    justify-content: space-between;
+  }
+  #product1 .pro{
+    margin: 15px ;
+  }
+  #sm-banner .banner-box {
+    padding: 20px;
+    height: 30vh;
+    min-width: 100%;
+  }
+  #banner-3 {
+    padding: 0 40px;
+  }
+  #banner-3 .banner-box{
+    width: 28%;
+  }
+  #newsletter .form{
+    width: 70%;
+  }
+
+}
+@media (max-width: 477px) {
+  #sm-banner .banner-box {
+    height: 40vh;
+    min-width: 100%;
+  }
+  #sm-banner .banner-box2{
+    margin-top: 20px;
+  }
+  #banner-3 {
+    padding: 0 20px;
+  }
+  #banner-3 .banner-box{
+    width: 100%;
+  }
+  #newsletter .form{
+    width: 100%;
+  }
+}
